@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  background-image: url('https://cdn.discordapp.com/attachments/1240250084088610939/1350142675634094101/static_2.png?ex=680e5a5a&is=680d08da&hm=fe9326a6639383a7fa7de4d74007198b5ced2971ca29e93782b66f9d08d8966b&');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #BFAAFF;
+}
+
+/* Kontenery */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Klasy do animacji przejścia */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
+}
+
+/* Stylizacja przycisków */
+button {
+  background-color: #3D0053;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.1s ease-in-out, background-color 0.3s ease;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+button:hover {
+  background-color: #5A007F;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #3D0053;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* Sekcja "O nas" */
+.about-content {
+  background: rgba(13, 13, 13, 0.8);
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 0 20px;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
